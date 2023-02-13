@@ -1,0 +1,28 @@
+.header {
+  @include area(70vh, 100%);
+  background-image: linear-gradient(
+      360deg,
+      #121212 0%,
+      rgba(18, 18, 18, 0) 100%
+    ),
+    url("../images/donation0.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 2px solid green;
+}
+
+.head-content {
+  @include area(auto, 60%);
+  padding: $ex-pm;
+  line-height: 1.5;
+}
+
+.pri-btn {
+  @include btn_formate(auto, auto, var(--orange), var(--white));
+}
+
+.sec-btn {
+  @include btn_formate(auto, auto, var(--white), var(--orange));
+  border: 1px solid var(--orange);
+}

@@ -1,0 +1,36 @@
+@mixin area($h, $w, $display: false, $grid: false) {
+  height: $h;
+  width: $w;
+  @if $display {
+    display: $display;
+    grid-template-columns: $grid;
+  } @else {
+    display: block;
+  }
+}
+
+@mixin btn_formate($h, $w, $bc, $clr) {
+  @include area($h, $w);
+  background: $bc;
+  border-radius: $defult-pm;
+  padding: $mid-pm;
+  color: $clr;
+}
+
+/*
+@mixin scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+  }
+}
+@mixin linktype($cl, $bgm) {
+  color: $cl;
+  background: $bgm;
+  font-weight: bold;
+  border-radius: 0.4rem;
+}
+*/
